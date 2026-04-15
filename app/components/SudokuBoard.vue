@@ -22,7 +22,7 @@
             :given="givenCells[r]?.[c] ?? false"
             :is-selected="selectedCell?.row === r && selectedCell?.col === c"
             :is-error="errorCells.has(`${r}-${c}`)"
-            :is-same-number="isSameNumber(val)"
+            :is-same-number="false"
             :is-related="isRelatedCell(r, c)"
             :notes="notes[r][c]"
             :is-solving="isSolving"

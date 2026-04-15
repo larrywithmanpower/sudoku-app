@@ -1,4 +1,5 @@
 import { ref, computed, reactive } from 'vue'
+import { useRuntimeConfig } from '#app'
 import type { Board, CellValue, Difficulty, GamePuzzle, BestRecord } from '~/utils/sudoku/types'
 import { cloneBoard, findErrors } from '~/utils/sudoku/validator'
 import { solvePuzzleAnimated } from '~/utils/sudoku/solver'
@@ -25,6 +26,9 @@ function saveBestRecord(difficulty: Difficulty, seconds: number) {
 }
 
 export function useGameState() {
+  const { app } = useRuntimeConfig()
+  const baseURL = (app.baseURL as string) || '/'
+
   const puzzle = ref<Board | null>(null)
   const solution = ref<Board | null>(null)
   const userBoard = ref<Board | null>(null)
@@ -179,7 +183,7 @@ export function useGameState() {
         worker.terminate()
       }
 
-      worker = new Worker(`${import.meta.env.BASE_URL}workers/sudoku.worker.js`)
+      worker = new Worker(`${baseURL}workers/sudoku.worker.js`)
       const id = Date.now().toString()
 
       worker.onmessage = (e) => {
