@@ -179,7 +179,7 @@ export function useGameState() {
         worker.terminate()
       }
 
-      worker = new Worker('/workers/sudoku.worker.js')
+      worker = new Worker(`${import.meta.env.BASE_URL}workers/sudoku.worker.js`)
       const id = Date.now().toString()
 
       worker.onmessage = (e) => {
