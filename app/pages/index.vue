@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gray-50 dark:bg-gray-900 py-4 px-4">
+  <div class="min-h-screen bg-gray-50 dark:bg-gray-900 py-4 px-4 pb-56">
     <div class="max-w-2xl mx-auto">
       <!-- Header -->
       <header class="relative flex items-center justify-center mb-4">
@@ -98,8 +98,8 @@
         />
       </div>
 
-      <!-- 手機數字鍵盤 -->
-      <div class="block">
+      <!-- 數字鍵盤（固定在底部）-->
+      <div class="fixed bottom-0 left-0 right-0 bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 px-4 py-3 z-20">
         <NumberKeypad
           :selected-value="selectedCellValue"
           @input="inputNumber"
