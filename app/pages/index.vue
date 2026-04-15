@@ -2,9 +2,14 @@
   <div class="min-h-screen bg-gray-50 dark:bg-gray-900 py-4 px-4">
     <div class="max-w-2xl mx-auto">
       <!-- Header -->
-      <header class="text-center mb-4">
-        <h1 class="text-3xl font-bold text-gray-800 dark:text-white tracking-tight">數獨</h1>
-        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Sudoku PWA</p>
+      <header class="relative flex items-center justify-center mb-4">
+        <div class="text-center">
+          <h1 class="text-3xl font-bold text-gray-800 dark:text-white tracking-tight">數獨</h1>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Sudoku PWA</p>
+        </div>
+        <div class="absolute right-0 top-1">
+          <HowToPlay />
+        </div>
       </header>
 
       <!-- 難度選擇 -->
