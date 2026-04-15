@@ -1,75 +1,30 @@
-# Nuxt Minimal Starter
+# 數獨 Sudoku PWA
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+離線數獨謎題 PWA，支援三種難度、提示、筆記模式與自動解題動畫。
 
-## Setup
+**線上體驗：** https://larrywithmanpower.github.io/sudoku-app/
 
-Make sure to install dependencies:
+## 功能
+
+- 三種難度：簡單 / 中等 / 困難
+- 提示功能：自動填入正確答案
+- 筆記模式：在格子中記下候選數字
+- 自動解題：動畫逐步展示解題過程
+- 最佳紀錄：各難度最快完成時間（儲存於 localStorage）
+- PWA 支援：可安裝至桌面，離線使用
+
+## 開發
 
 ```bash
-# npm
-npm install
-
-# pnpm
 pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+pnpm dev        # http://localhost:3000
+pnpm generate   # 靜態建置
+pnpm test       # 執行測試
 ```
 
-## Development Server
+## 技術棧
 
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- Nuxt 4 + Vue 3 + TypeScript
+- Tailwind CSS
+- Vite PWA（Service Worker + 離線快取）
+- Vitest

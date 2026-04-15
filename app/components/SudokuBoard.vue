@@ -8,10 +8,14 @@
       <template v-for="(val, c) in row" :key="c">
         <div
           class="cell-wrapper"
-          :class="{
-            'border-r-2 border-r-gray-700 dark:border-r-gray-300': (c + 1) % 3 === 0 && c !== 8,
-            'border-b-2 border-b-gray-700 dark:border-b-gray-300': (r + 1) % 3 === 0 && r !== 8,
-          }"
+          :class="[
+            (c + 1) % 3 === 0 && c !== 8
+              ? 'border-r-2 border-r-gray-800 dark:border-r-gray-200'
+              : 'border-r border-r-gray-300 dark:border-r-gray-600',
+            (r + 1) % 3 === 0 && r !== 8
+              ? 'border-b-2 border-b-gray-800 dark:border-b-gray-200'
+              : 'border-b border-b-gray-300 dark:border-b-gray-600',
+          ]"
         >
           <SudokuCell
             :value="val"

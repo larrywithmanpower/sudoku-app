@@ -58,8 +58,7 @@ const cellClasses = computed(() => ({
     w-full aspect-square
     text-lg sm:text-xl md:text-2xl
     select-none transition-colors duration-100
-    bg-white dark:bg-gray-800
-    border border-gray-300 dark:border-gray-600;
+    bg-white dark:bg-gray-800;
 }
 
 .cell-value {
