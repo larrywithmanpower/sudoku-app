@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gray-50 dark:bg-gray-900 py-4 px-4 pb-72">
+  <div class="min-h-screen bg-gray-50 dark:bg-gray-900 py-4 px-4 pb-64">
     <div class="max-w-2xl mx-auto">
       <!-- Header -->
       <header class="relative flex items-center justify-center mb-4">
